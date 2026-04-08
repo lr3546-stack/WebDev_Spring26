@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Objects Lesson</title>
+  </head>
+  <body>
+    <h1>Open the Console to see your output!</h1>
+
+    <script>
+      const book = {
+  title: "Fourth Wing",
+  author: "Rebecca Yarros",
+  pages: 528,
+  isAvailable: true,
+};
+
+console.log(book.title);
+
+
+console.log(book["author"]);
+
+book.genre = "Fantasy";
+
+book.isAvailable = false;
+
+book.describe = function () { 
+    console.log('${this.title} by ${this.author} - ${this.pages} pages');
+};
+
+book.describe(); 
+
+console.log(Object.keys(book));
+    </script>
+  </body>
+</html>
